@@ -1,19 +1,21 @@
-﻿int Promt(string messege)
+﻿int number = Promt("введите число ");
+int degree = Promt("введите степень числа ");
+Num( number, degree);
+void Num(int number,int degree)
 {
-    Console.WriteLine(messege);
+    int N = number;
+    for(int i = 1;i < degree; i++)
+    {
+       number = number * N; 
+    }
+    //return number;
+    Console.WriteLine($"Число {N} в степени {degree} равно {number}");
+}
+int Promt(string messege)
+{
+    Console.Write(messege);
     string strN = Console.ReadLine();
     int N =int.Parse(strN);
     return N;
 }
-int number = Promt("введите число ");
-int degree = Promt("введите второе число ");
-int i = 1;
-int N = number;
-while(  i < degree)
-{
-     number = number * N;
-     i++;
-}
-Console.WriteLine(number);
 
-//or (int d = 1;d <= N;d++)
