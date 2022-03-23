@@ -8,7 +8,6 @@ void Num(int number,int degree)
     {
        number = number * N; 
     }
-    //return number;
     Console.WriteLine($"Число {N} в степени {degree} равно {number}");
 }
 int Promt(string messege)
